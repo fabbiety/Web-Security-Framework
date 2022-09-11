@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <!-- Metas -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="keywords" content="cyber Security, Container, Kubernetes, Vulnerabilities, Azure, Threats, Mitigation, Compliance, Microservice, Cloud" />
+  <meta name="description" content="Security of Microservices Deployed in Cloud Container" />
+  <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
+  <meta name="author" content="Timothy Fabelurin" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <!-- Title  -->
+  <title> Timothy Fabelurin </title>
+
+  <!-- Core Style Css -->
+  <link rel="stylesheet" href="index.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div class="accordion container project-body">
+
+    <div class="project-header row">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./resources.html">Resources</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="col header">
+        <h1>Security of Microservices Deployment in Cloud Containers</h1>
+      </div>
+      <hr>
+
+      <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/one.jpeg" class="d-block image" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/two.jpeg" class="d-block image" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/three.jpeg" class="d-block image" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <hr>
+
+    <div class="introduction intro">
+      <h3>INTRODUCTION</h3>
+      <p>
+        The rise in the acceptance of Cloud Native Applications is without a doubt increasing exponentially due to obvious reasons. 
+        The cloud provides many features that encourages the increase in usage. As our lives now resolved around making use of software 
+        applications in our daily lives, the demand with respect to availability, fast update rollout, easier deployment procedures, 
+        flexible in the infrastructure resources and many more, are high on the product owners. With the help of cloud computing, most of 
+        the requirements are duly met. <br><br>
+        
+        Unfortunately, as with several technological inventions, security is usually an afterthought. There has been a sharp rise in 
+        cyber-attacks in recent year and this can be connected the shift in the process from legacy software development style to the 
+        new approach which includes microservice architecture enhanced by cloud computing. With the insecurity menace, there is urgent 
+        need to review the security operation of the system. <br><br>
+        
+        The issue identified in this research work that not of lack of available tools or techniques to make the application more secured,
+        but the reason of the rise in the insecurity is the effective use of all these tools and knowledge gap that is lacking to ensure
+        the security of the applications. <br><br>
+        
+        This project focus on developing an implementable framework that will help professional to secure their environment effectively 
+        and serve as a base for further research work in the field of cloud security. <br><br>
+
+        It is worth noting that Microsoft Azure was the refrence cloud provider used in this research work, however, most recommendations are applicable to other cloud environment as well.
+        For the full implementation of this research work, visit my <a href="https://github.com/fabbiety" target="-blank" class="icon">
+          <i class="fa fa-github"></i>
+        </a> repository. (This is subjective to project supervisor's approval)
+        
+
+      </p>
+    </div>
+    <div class="project-content">
+      <div class="accordion" id="accordionExample">
+
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseOne">
+            Platform Layer
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+          aria-labelledby="panelsStayOpen-headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            The overall security of the cloud infrastructure is very important because on the platform all the services rely on,
+            therefore, compromising the security of the platform is obviously disastrous. The security architecture on public 
+            cloud platforms is a shared responsibility, meaning, there is part where the cloud vendor is responsible for and that
+            of the cloud user. Cloud providers are held on a high standard by regulatory bodies and are regularly checked for compliance.
+            Unfortunately, platform misconfiguration by the users is the source of most breaches on cloud. Attackers easily exploit the 
+            loopholes to compromise the cloud environment using different techniques. The exploits include but not limited to the followings,<br> <br>
+         	  <strong>PrivilegeEscalation:</strong>  this is where attacker gain higher level of permission on the system after gaining access 
+            into the environment with an unprivileged access. For example, having access to the SYSTEM/root level or Global Administrator. <br>
+          	<strong>Trusted Relationship:</strong> this is where attacker gained access through an already established trusted third-party organization where there is not much scrutiny.
+              <br><br>
+            Recomended Security measures <br><br>
+            <strong>Role-based access control (RBAC)</strong>	<br>
+            Access to cloud resource is a critical function that cloud user need to manage properly. RBAC is an authorization
+            system that maintains the less privilege principle for access management to cloud resource. Azure RBAC was implemented
+            in this work, and it helped to manage who has access to resources and the function they can undertake with those resources
+            and the area the individual has access to. Without a doubt, this security measure curbs many attackers' exploit.
+              <br><br>
+            Scope: This is the set of resources that access created is applied to, as the role created are limited by the scope. <br>
+            Role assignment: this refers to the process of attaching defined role to user or group or service principal within a particular
+            scope for access creation. <br> <br>
+             <strong>Multifactor Authentication</strong> <br>
+              This is a process where user is required to provide an additional form of identification when signing in. Security is increased
+              when this second form of identity is not easy for an attacker to obtain. For example, fingerprint scan, mobile phone code. <br><br>
+             <strong>Application Insight</strong> <br> 
+              This is an Application Performance Management service. Performance anomaly within the application can be swiftly detected.
+              User experience can be captured, and issue can be easily diagnosed. It serves has a security valuable tool which increases
+              the level of confidentiality, integrity, and availability of the system. Application insight was one of the requirements for
+              integrating Prometheus and Grafana into Azure cloud environment. <br><br>
+              <strong>Security Policy Management </strong> <br>
+              This provides an integrated policies and compliance security monitoring system across the cloud environment.
+              With this in place, threats that could have easily be unidentified can be detected. <br><br>
+              <strong>Monitoring tools Implementation</strong> <br>
+              Kubernetes has numerous important features that makes it the platform of choice for building cloud distributed applications.
+              Due to its complexity in structure and distributed nature, monitoring all the activities within the cluster can be truly
+              challenging. <br>
+              <h6>Prometheus and Grafana</h6> 
+              To effectively capture the system's performance and the test result analysis, a tool know has Prometheus can be
+              used for the scrapping metrics from different components running in the cluster. It is an open-source monitoring tools
+              which includes a powerful query language known as PromQl, used for multidimensional data modeling and time series database.
+              Grafana helps to deliver a quality visualization effect for Prometheus for effective analysis and alerting. With these
+              tools in place the activities of resources in the system can be capture resource log obtained for security auditing purposes. <br><br>
+              <strong>Firewall</strong> <br>
+              Used for the protection of resources running in cloud. It can provide layer 3 to layer 7 filtering and threat 
+              intelligence from updated security pools and it also includes signature-based intrusion detection system. <br><br>
+              
+              <strong>Web Application Firewall:</strong> <br>
+              This is a feature in Azure application Gateway that protects web applications from most of the top 10 OWASP
+               common web vulnerabilities.
+
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo">
+            Orchestration Layer
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Container orchestration automates the deployment, provisioning, scaling, networking, and management of containerized 
+            applications. Today, the most popular container orchestration tool is Kubernetes and most public cloud platforms 
+            including Azure offers managed Kubernetes as a service. In this project, the Azure Kubernetes Service was used and 
+            as detailed earlier in the previous chapter, Kubernetes serves has the bed rock of infrastructure on which app depends
+            on and therefore has several functions. Due to this importance and reliance of the applications on the container
+            orchestration and the high chances of misconfigurations and unknowing vulnerabilities not tackled, attackers make 
+            it a focal target to get through to the containers and eventually to the application and exploit. <BR></BR>
+
+           <strong>Listed below are some good recommendations. </strong> <br> <br>
+
+           <strong>Authentication and authorization </strong> <br>
+           It is of best practice to implement ways of managing access to not only resources and services but also identity for the cluster. <br><br>
+
+           <strong>Azure Active Directory</strong> <br>  
+            Since Kubernetes does not have an identity management solution to control resources, integrating cloud cluster with the 
+            identity management component with supported existing enterprise ready solution like azure AD is needed. With the integration. 
+            It was possible to created specific Cluster related roles where access permission to resources were defined. <br><br>
+
+           <strong>Kubernetes Role-Based Access Control </strong>   <br>
+            Securing access to the Kubernetes API server is one of the most important measures because it serves as a single gateway for 
+            all request to perform actions within the cluster (set of nodes that run containerized applications).
+            Also, namespace (naming identification of set of resources within a cluster, creating a logical isolation boundary) permission 
+            based is should be implemented instead of the cluster-wide permission. <br><br>
+
+            <strong> Using updated Kubernetes Version  </strong> <br>
+            Regular updates are usually provided by the platform owners and applying these updates is need for staying current on new 
+            features and most importantly for bug fixes in the cluster. It was ensured that the latest version was implemented in this project. <br><br>
+
+           <strong>Secret Management  </strong>   <br>
+            Kubernetes has “Secret” object which contains sensitive data like key, password, or token. The data save are usually meant for 
+            specific pods or container images and this makes the application code to devoid any confidential data. However, this is secret 
+            is usually not encrypted by default. Anyone that has access to the API sever data store (etcd) can compromise the data. To deal 
+            with this issue, it is recommended to have the secret managed more securely by encrypting the secret and enabling RBAC. 
+            Azure key vault was in used in this implementation to store and retrieve digital keys and credentials. Azure Key Vault logging 
+            can be enabled to monitor how and who accessed the keys (this was implemented in this project). <br><br>
+ 
+            Using <strong>pod managed identity</strong> is also an important feature available in Azure cloud. With this feature, a pod can authenticate 
+            itself against azure services that support manage identity such as SQL or Storage. 
+            It is very vital feature that helps in the resolving issues surrounding stored tokens and keys compromise in cloud. <br><br>
+
+           <strong>Protecting the cluster with Azure Container Networking Interface </strong>   
+            By default, when the AKS cluster are created, virtual network and subnet comes with the creation. All the pods can there, 
+            communicate with each other even if they are in different namespace. Although this makes configuration easier and fast, 
+            however, issue arises if a malicious container gets infiltrated and all other pods becomes vulnerable.
+            When Azure Container Networking Interface is enabled, range of IP addresses are predefined and planned. The Ip addresses are 
+            unique across the network space and all pod gets IP from the subnet. The maximum number of pods each node support is also 
+            configured and thus, specific number of IP address are reserved for that node. With this feature in place, any  intruding 
+            container, will have no IP to used.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree" >
+            OS/Kernel Layer
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            The nodes used in azure Kubernetes cluster (AKS) are virtual machines and the management and maintenance of these VMs are the
+            responsibility of the user. The nodes are either of Linux -Ubuntu distribution or Windows Server - Windows Server 2019, on which
+            containerd or Docker containers are run. Though updates are automatically done every night where security patches are done on
+            the AKS nodes which generally fixes kernel bugs and other vulnerabilities, however, to reduce potential surface attack, 
+           <strong>AppArmor </strong>   - a Linux kernel security module, was implemented to supplement user and group permission and restrict programs to 
+           limited resources. AppArmor profile that restrict read, write, or execute actions and functions can be created.  <br><br>
+
+           <strong>Seccomp</strong> is also a Linux kernel security module, and is natively supported by the Docker runtime. 
+            With seccomp, you can limit container process calls. Align to the best practice of granting the container minimal permission 
+            only to run by: <br><br>
+
+            Defining with filters what actions to allow or deny. <br>
+            Annotating within a pod YAML manifest to associate with the seccomp filter.
+           
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseFour">
+            Container Layer
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingFour" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            When deploying and running Applications in the cloud, the main priority both for the legitimate users and attacker is the 
+            container and container image, therefore, the security measure at this stage is important. <br> <br>
+            
+           <strong>Highlighted below are the measures implemented and equally recommended</strong>    <br> <br>
+            
+           <strong> Verified base container image</strong>     <br>
+            Since applications has always been developed on an existing base container image, it is extremely important to be ensure that
+            the base image is from a verified source and up to date. A container with and unpatched or outdated base image can be a possible
+            attack vector and pose security risk. <br><br>
+            
+           <strong> Scan images for vulnerabilities</strong>   <br> 
+            Before making use of a container image, it is essential that the image is scanned for vulnerabilities and remediation is provided.
+            Scanning the base images before deployment is not enough contrary to what is mostly believed. The continuous checks for 
+            vulnerabilities and malicious activities and compliance bridge with the images at runtime against the set policies is what makes
+            the difference. This action ensures that in the instance the cluster is compromised, and commands or programs which were not 
+            declared “safe” are executed, the action will not only be denied but also, the administrator will be alerted. 
+            For the implementation of this procedure, Microsoft Defender for containers was used. It was effective for the Run-time threat
+            protection for the nodes and cluster and any suspicious activities can be alerted instantly. It was also helpful in vulnerability
+            assessment and environment hardening in terms of providing visibility into misconfigurations and threat identification. <br> <br>
+            
+            To ensure compliance, Azure Policy which contain built-in definitions was used. The list ranges from Network security to 
+            privilege access to DevOps Security etc. All these built-in policies can be enforced to the cluster.
+            Lastly, the Azure container registry assist in safeguarding the images and have automatic update and vulnerability checks 
+            run on them. <br><br>
+            
+          
+
+           <strong> User-mode container enforcement</strong>     
+            Containers do not require root access to the node but by default, all containers run as root with all privileges. This 
+            introduces security vulnerabilities of possible permission escalation into the system. To enforce user mode on the containers, 
+            security context is used while defining the deployment file. <br><br>
+            
+           <strong>Open Service Mesh (OSM) AKS add-on </strong>    <br>
+            A lightweight, extensible, cloud native service mesh was integrated into the Kubernetes cluster, which was for -among other features, 
+            uniformity management, securing and observability of dynamic microservice environments. <br><br>
+            
+            Below are the list of capabilities and features of OSM  <br>
+            Secure communication in between services by enabling TLS (protocol which encrypt communication path) <br>
+            Access control policies definition and execution for services. E.g., Authorizing only HTTPS traffic between services. <br>
+            Monitoring and service debugging with the use of observability and insight into apps metrics <br>
+            Seamless integration with external certificate management <br>
+            It can be integrated with existing solutions like the Ingress controller, NGINX etc. <br> <br>
+            
+            There are other tools that are also recommended by Microsoft that has the functionality of it being integrated into the 
+            continuous integration and continuous deployment (CI/CD) pipeline and the automation of scanning, runtime protection, 
+            compliance checks and deployment are done. A very good example of this is the Prisma Cloud tool.
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseFive">
+            Application Layer
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingFive" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            The application section is all about the code itself. The overall objective is to ensure the left shifting of the security 
+            measures, because of this, tools to archive this objective are to be put in place when developing the codes. <br> <br>
+            
+            <strong>SAST - Static Application Security Testing </strong>   <br>
+            SAST is a testing methodology that analyzes source code for identification of vulnerabilities which makes applications 
+            susceptible to attack. It is often referred to as White-box testing. SAST provides real-time feedback as coding is 
+            done and not only does the tools identifies the vulnerabilities, but they also provide in-depth guidance on fixing the issue 
+            without security experts involvement. <br><br>
+            
+            <strong>SCA - Software Composition Analysis </strong>  <br>
+            There are usually open-source components, supporting libraries and other dependencies that are used in developing applications, 
+            SCA scans the code base to provide visibility into these software components, the license compliance, security vulnerabilities 
+            and potential exploits. <br><br>
+            
+           <strong>DAST - Dynamic Application Security Testing</strong> <br>
+            This is a type of black-box (the application tested from outside representing hacker's approach) security testing in which 
+            dynamic test are performed on the application. Usually done at the end of the development cycle.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.twitter.com/fabbiety" target="_blank" class="icon">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href=""
+        target="-blank" class="icon">
+        <i class="fa fa-envelope"></i>
+      </a>
+      <a href="https://github.com/fabbiety" target="_blank" class="icon">
+        <i class="fa fa-github"></i>
+      </a>
+      <a href="linkedin.com/in/timothy-fabelurin"target="_blank" class="icon">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+    <div>
+      <p>Copyright © 2022 Timothy Fabelurin</p>
+    </div>
+  </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,100 @@
+.project-body {
+  padding: 3em 6em;
+}
+
+.project-header {
+  text-align: center;
+}
+
+.project-header h1 {
+  font-size: 4em;
+  font-weight: 200;
+}
+
+.project-content {
+  padding: 5em;
+}
+
+.image {
+  width: 100%;
+  height: 20em;
+  border-radius: .3em;
+}
+
+.accordion-button:hover {
+  background-color: rgb(163, 171, 180) !important;
+}
+
+
+
+.introduction{
+  margin-top: 25px;
+  font-size: 18px;
+  -webkit-animation: fadein 7s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 7s; /* Firefox < 16 */
+  -ms-animation: fadein 7s; /* Internet Explorer */
+  -o-animation: fadein 7s; /* Opera < 12.1 */
+  animation: fadein 7s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+footer {
+  padding: 2em;
+  background-color: rgb(64, 84, 135);
+  height: 5em;
+  display: flex;
+}
+footer .social {
+  float: left;
+}
+
+footer p {
+  color: white;
+  position:absolute; right:2em;
+}
+
+footer .social a {
+  padding: .2em;
+  margin: 0em 1em;
+  font-size: 18px;
+  border-radius: 50%;
+  background: white;
+  margin: 0px 5px;
+}
+
+.icon {
+  color: rgb(64, 84, 135);
+  text-align: center;
+}
+
+footer .social a:hover {
+  color: rgba(152, 156, 185, 0.9);
+}
